@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aninditya - CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f0f;
+        }
+        
+        .transition-smooth {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+        
+        .accent-color {
+            color: #d4af37;
+        }
+        
+        .accent-bg {
+            background-color: #d4af37;
+        }
+        
+        .accent-border {
+            border-color: #d4af37;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        .nav-active {
+            color: #d4af37;
+            background-color: #1a1a1a;
+            font-weight: 600;
+        }
+        
+        .skill-bar {
+            height: 6px;
+            background-color: #2a2a2a;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background-color: #d4af37;
+            border-radius: 3px;
+        }
+        
+        .portfolio-filter {
+            cursor: pointer;
+        }
+        
+        .portfolio-filter.active {
+            color: #d4af37;
+            font-weight: 600;
+            background-color: #1a1a1a;
+        }
+        
+        .portfolio-item {
+            display: none;
+        }
+        
+        .portfolio-item.active {
+            display: block;
+        }
+        
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .contact-table th,
+        .contact-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        
+        .contact-table th {
+            background-color: #1a1a1a;
+            color: #d4af37;
+            font-weight: 600;
+            width: 30%;
+        }
+        
+        .contact-table td {
+            background-color: #0f0f0f;
+            color: #cccccc;
+        }
+        
+        .contact-table tr:hover td {
+            background-color: #1a1a1a;
+        }
+        
+        .custom-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .custom-list li {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid #2a2a2a;
+        }
+        
+        .custom-list li:hover {
+            background-color: #2a2a2a;
+            transform: translateX(5px);
+            border-color: #d4af37;
+        }
+        
+        .numbered-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        
+        .numbered-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #2a2a2a;
+            color: #cccccc;
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #d4af37;
+            border-radius: 2px;
+        }
+
+        .glass-effect {
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-300">
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <!-- Sidebar -->
+        <div class="md:w-1/3 lg:w-1/4 glass-effect rounded-lg m-4 p-6 shadow-xl">
+            <div class="flex flex-col items-center text-center mb-8">
+                <!-- Foto Profile -->
+                <div class="w-32 h-32 rounded-full bg-gray-800 mb-4 overflow-hidden border-2 border-gray-700 shadow-lg">
+                     <img src="images/profile.jpg" 
+                         alt="Profile Photo" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Nama dan Jabatan -->
+                <h1 class="text-2xl font-bold text-white mb-2">Aninditya Cahya Mutiara</h1>
+                <p class="text-gray-400 mb-4">Information Systems Student</p>
+                
+                <!-- Tombol Jabatan -->
+                <div class="accent-bg text-black font-medium px-4 py-1 rounded-full text-sm">
+                    Data & Technology Enthusiast
+                </div>
+            </div>
+            
+            <!-- Kontak Pribadi -->
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-white mb-4">Contact Information</h3>
+                <ul class="custom-list space-y-3">
+                    <li class="flex items-center p-3 rounded-lg bg-gray-900 hover:bg-gray-800 transition-smooth border border-gray-700">
+                        <i class="fas fa-envelope accent-color mr-3"></i>
+                        <span class="text-gray-300">aninditya145@gmail.com</span>
+                    </li>
+                    
+                    <li class="flex items-center p-3 rounded-lg bg-gray-900 hover:bg-gray-800 transition-smooth border border-gray-700">
+                        <i class="fas fa-phone accent-color mr-3"></i>
+                        <span class="text-gray-300">+62 877 8489 2081</span>
+                    </li>
+                    
+                    <li class="flex items-center p-3 rounded-lg bg-gray-900 hover:bg-gray-800 transition-smooth border border-gray-700">
+                        <i class="fas fa-birthday-cake accent-color mr-3"></i>
+                        <span class="text-gray-300">Januari 25, 2005</span>
+                    </li>
+                    
+                    <li class="flex items-center p-3 rounded-lg bg-gray-900 hover:bg-gray-800 transition-smooth border border-gray-700">
+                        <i class="fas fa-map-marker-alt accent-color mr-3"></i>
+                        <span class="text-gray-300">Cikupa, Tangerang, Banten</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Konten Utama -->
+        <div class="md:w-2/3 lg:w-3/4 p-4 md:p-8">
+            <!-- Navbar -->
+            <nav class="flex flex-wrap justify-center md:justify-start space-x-0 md:space-x-8 mb-12 border-b border-gray-800 pb-4">
+                <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-gray-800 transition-smooth text-gold-400 font-medium" data-page="about">About</a>
+                <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-gray-800 transition-smooth text-gray-500 hover:text-gold-400" data-page="resume">Resume</a>
+                <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-gray-800 transition-smooth text-gray-500 hover:text-gold-400" data-page="portfolio">Portfolio</a>
+                <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-gray-800 transition-smooth text-gray-500 hover:text-gold-400" data-page="Licenses and Certifications">Licenses and Certifications</a>
+                <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-gray-800 transition-smooth text-gray-500 hover:text-gold-400" data-page="contact">Contact</a>
+            </nav>
+            
+            <!-- About Page -->
+            <div id="about" class="page active">
+                <h2 class="text-3xl font-bold text-white mb-4 section-title">
+                    About Me
+                </h2>
+                
+                <p class="text-gray-400 mb-6 max-w-3xl leading-relaxed">
+                    Information Systems student at Gunadarma University with a strong interest in data and technology. 
+                    Passionate about learning, developing analytical and programming skills, and exploring opportunities in IT and data fields. 
+                    Open to collaboration and continuous growth.
+                </p>
+
+                
+                <h3 class="text-2xl font-semibold text-white mb-6 section-title">What I'm Doing</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card 1 -->
+                    <div class="glass-effect p-6 rounded-lg hover-lift transition-smooth">
+                        <div class="flex items-start">
+                            <div class="accent-bg text-black p-3 rounded-lg mr-4">
+                                <i class="fas fa-adjust text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white mb-2">Photo Editing</h4>
+                                <p class="text-gray-400">Enhancing and retouching images to create visually appealing and balanced results.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="glass-effect p-6 rounded-lg hover-lift transition-smooth">
+                        <div class="flex items-start">
+                            <div class="accent-bg text-black p-3 rounded-lg mr-4">
+                                <i class="fas fa-code text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white mb-2">Web Development</h4>
+                                <p class="text-gray-400">Developing responsive and dynamic websites using modern frameworks and technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="glass-effect p-6 rounded-lg hover-lift transition-smooth">
+                        <div class="flex items-start">
+                            <div class="accent-bg text-black p-3 rounded-lg mr-4">
+                                <i class="fas fa-wifi text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white mb-2">Wi-Fi Network Setup</h4>
+                                <p class="text-gray-400">Assisting in setting up and configuring Wi-Fi networks for personal and small-scale use.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="glass-effect p-6 rounded-lg hover-lift transition-smooth">
+                        <div class="flex items-start">
+                            <div class="accent-bg text-black p-3 rounded-lg mr-4">
+                                <i class="fas fa-camera text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white mb-2">Photography</h4>
+                                <p class="text-gray-400">Capturing various moments and scenes with creativity and attention to detail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hobbies Section -->
+                <div class="mt-12">
+                    <h3 class="text-2xl font-semibold text-white mb-6 section-title">My Hobbies & Interests</h3>
+                    <ul class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <li class="glass-effect p-4 rounded-lg text-center hover-lift transition-smooth">
+                            <i class="fas fa-laptop-code text-2xl accent-color mb-2"></i>
+                            <p class="text-white font-medium">Programming</p>
+                        </li>
+                        <li class="glass-effect p-4 rounded-lg text-center hover-lift transition-smooth">
+                            <i class="fas fa-camera text-2xl accent-color mb-2"></i>
+                            <p class="text-white font-medium">Photography</p>
+                        </li>
+                        <li class="glass-effect p-4 rounded-lg text-center hover-lift transition-smooth">
+                            <i class="fas fa-book text-2xl accent-color mb-2"></i>
+                            <p class="text-white font-medium">Reading</p>
+                        </li>
+                        <li class="glass-effect p-4 rounded-lg text-center hover-lift transition-smooth">
+                            <i class="fas fa-music text-2xl accent-color mb-2"></i>
+                            <p class="text-white font-medium">Music</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Resume Page -->
+            <div id="resume" class="page">
+                <h2 class="text-3xl font-bold text-white mb-8 section-title">Resume</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Education -->
+                    <div class="lg:col-span-2">
+                        <h3 class="text-2xl font-semibold text-white mb-6 section-title">Education</h3>
+                        
+                        <div class="mb-8 glass-effect p-6 rounded-lg">
+                            <h4 class="text-xl font-medium text-white">Universitas Gunadarma</h4>
+                            <p class="accent-color mb-2 font-medium">2023 – Sekarang</p>
+                            <p class="text-gray-400">S1 Sistem Informasi</p>
+                        </div>
+                        
+                        <div class="mb-8 glass-effect p-6 rounded-lg">
+                            <h4 class="text-xl font-medium text-white">SMK Bina Am Ma'mur</h4>
+                            <p class="accent-color mb-2 font-medium">2020 – 2023</p>
+                            <p class="text-gray-400">Teknik Komputer & Jaringan</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Experience -->
+                    <div class="lg:col-span-2">
+                        <h3 class="text-2xl font-semibold text-white mb-6 section-title">Experience</h3>
+                        
+                        <div class="mb-8 glass-effect p-6 rounded-lg">
+                            <h4 class="text-xl font-medium text-white">Internship Student</h4>
+                            <p class="accent-color mb-2 font-medium">2022 – 2022</p>
+                            <p class="text-gray-400">PT. Dynaplast</p>
+                        </div>
+
+                        <div class="mb-8 glass-effect p-6 rounded-lg">
+                            <h4 class="text-xl font-medium text-white">Volleyball Team Member</h4>
+                            <p class="accent-color mb-2 font-medium">2021 – 2023</p>
+                            <p class="text-gray-400">SMK Bina Am Ma'mur</p>
+
+                        </div>
+                    </div>
+                    
+                    <!-- Skills -->
+                    <div class="lg:col-span-3">
+                        <h3 class="text-2xl font-semibold text-white mb-6 section-title">My Skills</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Skill 1 -->
+                            <div class="glass-effect p-6 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="text-lg font-medium text-white">Microsoft Office</h4>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Skill 2 -->
+                            <div class="glass-effect p-6 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="text-lg font-medium text-white">SQL Database Management</h4>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Skill 3 -->
+                            <div class="glass-effect p-6 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="text-lg font-medium text-white">Network Configuration</h4>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Skill 4 -->
+                            <div class="glass-effect p-6 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="text-lg font-medium text-white">Web Development</h4>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Skill 5 -->
+                            <div class="glass-effect p-6 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="text-lg font-medium text-white">Communication & Teamwork</h4>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Skill 6 -->
+                            <div class="glass-effect p-6 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h4 class="text-lg font-medium text-white">Time Management</h4>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Programming Languages -->
+                        <div class="mt-8 glass-effect p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold text-white mb-4">Programming Languages Proficiency</h3>
+                            <ol class="numbered-list">
+                                <li class="flex justify-between">
+                                    <span>JavaScript</span>
+                                    <span class="accent-color font-medium">Beginner</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Python</span>
+                                    <span class="accent-color font-medium">Intermediate</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>HTML/CSS</span>
+                                    <span class="accent-color font-medium">Intermediate</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>SQL</span>
+                                    <span class="accent-color font-medium">Intermediate</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>PHP</span>
+                                    <span class="accent-color font-medium">Beginner</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Page -->
+            <div id="portfolio" class="page">
+                <h2 class="text-3xl font-bold text-white mb-8 section-title">Portfolio</h2>
+                
+                <!-- Portfolio Filter -->
+                <div class="mb-8">
+                    <ul class="flex flex-wrap gap-4">
+                        <li>
+                            <button class="portfolio-filter active px-4 py-2 rounded-lg bg-gray-800 text-gold-400 border border-gray-700 transition-smooth" data-filter="all">All</button>
+                        </li>
+                        <li>
+                            <button class="portfolio-filter px-4 py-2 rounded-lg bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-gold-400 border border-gray-700 transition-smooth" data-filter="mikrotik-configuration">Mikrotik Configuration</button>
+                        </li>
+                        <li>
+                            <button class="portfolio-filter px-4 py-2 rounded-lg bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-gold-400 border border-gray-700 transition-smooth" data-filter="software-development">Software Development</button>
+                        </li>
+                        <li>
+                            <button class="portfolio-filter px-4 py-2 rounded-lg bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-gold-400 border border-gray-700 transition-smooth" data-filter="network-system-administration">Network & System Administration</button>
+                        </li>
+                        <li>
+                            <button class="portfolio-filter px-4 py-2 rounded-lg bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-gold-400 border border-gray-700 transition-smooth" data-filter="ui-ux-design">UI/UX Design</button>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Portfolio Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Hotspot Setup -->
+                    <div class="portfolio-item active mikrotik-configuration glass-effect rounded-lg overflow-hidden shadow-lg hover-lift transition-smooth">
+                        <div class="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                            <img src="images/hotspot.jpeg" alt="hotspot" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white mb-2">Hotspot Setup</h3>
+                            <span class="inline-block px-3 py-1 bg-gray-800 text-gold-400 rounded-full text-sm border border-gray-700">Mikrotik Configuration</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Cashier Application -->
+                    <div class="portfolio-item active software-development glass-effect rounded-lg overflow-hidden shadow-lg hover-lift transition-smooth">
+                        <div class="h-48 bg-gradient-to-r from-green-500 to-teal-600 flex items-center justify-center">
+                            <img src="images/kasir.jpeg" alt="kasir" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white mb-2">Cashier Application</h3>
+                            <span class="inline-block px-3 py-1 bg-gray-800 text-gold-400 rounded-full text-sm border border-gray-700">Software Development</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Web Server Configuration -->
+                    <div class="portfolio-item active network-system-administration glass-effect rounded-lg overflow-hidden shadow-lg hover-lift transition-smooth">
+                        <div class="h-48 bg-gradient-to-r from-yellow-500 to-orange-600 flex items-center justify-center">
+                            <img src="images/webserver.png" alt="wordpress" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white mb-2">Web Server Configuration</h3>
+                            <span class="inline-block px-3 py-1 bg-gray-800 text-gold-400 rounded-full text-sm border border-gray-700">Network & System Administration</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Educational Quiz Program -->
+                    <div class="portfolio-item active software-development glass-effect rounded-lg overflow-hidden shadow-lg hover-lift transition-smooth">
+                        <div class="h-48 bg-gradient-to-r from-red-500 to-pink-600 flex items-center justify-center">
+                            <img src="images/quizzy.png" alt="quizzy kids" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white mb-2">Educational Quiz Program</h3>
+                            <span class="inline-block px-3 py-1 bg-gray-800 text-gold-400 rounded-full text-sm border border-gray-700">Software Development</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Figma Desain -->
+                    <div class="portfolio-item active ui-ux-design glass-effect rounded-lg overflow-hidden shadow-lg hover-lift transition-smooth">
+                        <div class="h-48 bg-gradient-to-r from-indigo-500 to-blue-600 flex items-center justify-center">
+                            <img src="images/figma.png" alt="karasuno" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white mb-2">Basic Figma Website Design</h3>
+                            <span class="inline-block px-3 py-1 bg-gray-800 text-gold-400 rounded-full text-sm border border-gray-700">UI/UX Design</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Figma Desain -->
+                    <div class="portfolio-item active ui-ux-design glass-effect rounded-lg overflow-hidden shadow-lg hover-lift transition-smooth">
+                        <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center">
+                            <img src="images/figma2.png" alt="macbook" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white mb-2">Basic Figma Website Design</h3>
+                            <span class="inline-block px-3 py-1 bg-gray-800 text-gold-400 rounded-full text-sm border border-gray-700">UI/UX Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Licenses and Certifications Page -->
+            <div id="Licenses and Certifications" class="page">
+                <h2 class="text-3xl font-bold text-white mb-8 section-title">Licenses and Certifications</h2>
+                
+                <!-- Licenses and Certifications List -->
+                <ul class="space-y-6">
+                    <li class="glass-effect rounded-lg overflow-hidden hover-lift transition-smooth">
+                        <div class="p-6">
+                            <div class="flex justify-between text-sm text-gray-500 mb-2">
+                                <span>Certifications</span>
+                                <span>Sep, 2025</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Classical Cryptography for Beginner</h3>
+                            <p class="text-gray-400 mb-4">Cyber Academy Indonesia</p>
+                        </div>
+                    </li>
+                    
+                    <li class="glass-effect rounded-lg overflow-hidden hover-lift transition-smooth">
+                        <div class="p-6">
+                            <div class="flex justify-between text-sm text-gray-500 mb-2">
+                                <span>Certifications</span>
+                                <span>Sep, 2025</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Introduction to Information Security</h3>
+                            <p class="text-gray-400 mb-4">Cyber Academy Indonesia</p>
+                        </div>
+                    </li>
+                    
+                    <li class="glass-effect rounded-lg overflow-hidden hover-lift transition-smooth">
+                        <div class="p-6">
+                            <div class="flex justify-between text-sm text-gray-500 mb-2">
+                                <span>Certifications</span>
+                                <span>Jul, 2024</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-4">JavaScript Programming Language Fundamental</h3>
+                            <p class="text-gray-400 mb-4">Universitas Gunadarma</p>
+                        </div>
+                    </li>
+                    
+                    <li class="glass-effect rounded-lg overflow-hidden hover-lift transition-smooth">
+                        <div class="p-6">
+                            <div class="flex justify-between text-sm text-gray-500 mb-2">
+                                <span>Certifications</span>
+                                <span>Mar, 2022</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Industrial Work Practice</h3>
+                            <p class="text-gray-400 mb-4">PT. Dynaplast</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Contact Page -->
+            <div id="contact" class="page">
+                <h2 class="text-3xl font-bold text-white mb-8 section-title">Contact Me</h2>
+                
+                <div class="glass-effect p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-white mb-6">Contact Information</h3>
+                    
+                    <!-- Table untuk informasi kontak -->
+                    <table class="contact-table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Personal Contact Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><i class="fas fa-envelope accent-color mr-2"></i> Email</th>
+                                <td>aninditya145@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-phone accent-color mr-2"></i> Phone</th>
+                                <td>+62 877 8489 2081</td>
+                            </tr>
+                            <tr>
+                                <th><i class="fab fa-instagram accent-color mr-2"></i> Instagram </th>
+                                <td>ciggsdaydream</td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-map-marker-alt accent-color mr-2"></i> Address</th>
+                                <td>Cikupa, Tangerang, Banten</td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-clock accent-color mr-2"></i> Response Time</th>
+                                <td>Within 24 hours</td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-globe accent-color mr-2"></i> Languages</th>
+                                <td>Indonesian (Native), English (Intermediate)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h3 class="text-xl font-semibold text-white mt-8 mb-6">Send Me a Message!</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1 text-gray-300">Full name</label>
+                            <input type="text" class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-smooth text-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1 text-gray-300">Email address</label>
+                            <input type="email" class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-smooth text-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1 text-gray-300">Your Message</label>
+                            <textarea rows="4" class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-smooth text-white"></textarea>
+                        </div>
+                        <button type="submit" class="accent-bg text-black font-medium px-6 py-3 rounded-lg hover:bg-yellow-600 transition-smooth">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Page Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+            
+            // Set initial active page
+            setActivePage('about');
+            
+            // Add click event to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.getAttribute('data-page');
+                    setActivePage(pageId);
+                });
+            });
+            
+            function setActivePage(pageId) {
+                // Hide all pages
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show selected page
+                document.getElementById(pageId).classList.add('active');
+                
+                // Update navigation active state
+                navLinks.forEach(link => {
+                    if (link.getAttribute('data-page') === pageId) {
+                        link.classList.add('nav-active');
+                        link.classList.remove('text-gray-500');
+                        link.classList.add('text-gold-400');
+                    } else {
+                        link.classList.remove('nav-active');
+                        link.classList.remove('text-gold-400');
+                        link.classList.add('text-gray-500');
+                    }
+                });
+            }
+            
+            // Portfolio Filter
+            const portfolioFilters = document.querySelectorAll('.portfolio-filter');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            portfolioFilters.forEach(filter => {
+                filter.addEventListener('click', function() {
+                    // Remove active class from all filters
+                    portfolioFilters.forEach(f => {
+                        f.classList.remove('active');
+                        f.classList.remove('bg-gray-800', 'text-gold-400');
+                        f.classList.add('bg-gray-900', 'text-gray-400');
+                    });
+                    
+                    // Add active class to clicked filter
+                    this.classList.add('active');
+                    this.classList.remove('bg-gray-900', 'text-gray-400');
+                    this.classList.add('bg-gray-800', 'text-gold-400');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide portfolio items based on filter
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                            item.classList.add('active');
+                        } else {
+                            item.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
